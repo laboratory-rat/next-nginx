@@ -1,0 +1,13 @@
+version: '3'
+services:
+  client: 
+    build: ./client
+    container_name: micro-client
+  moderation:
+    build: ./moderation
+    container_name: micro-moderation
+  nginx: 
+    build: ./nginx
+    container_name: micro-nginx
+    ports: 
+      - 80:80
